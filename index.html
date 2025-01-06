@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <!-- css link attaching here -->
     <link rel="stylesheet" href="./index.css">
     <!-- favicon attaching here -->
-
+    <link rel="shortcut icon" href="./Assets/logo.webp" type="image/x-icon">
     <!-- daisy cdn attaching here-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +16,20 @@
 
 <body>
     <header>
-
+        <nav class="w-11/12 mx-auto py-6 flex justify-between items-center border-b">
+            <div class="logo flex gap-2">
+                <img src="./Assets/logo.webp" alt="">
+                <p class="font-extrabold">Peddy</p>
+            </div>
+            <div class="flex gap-5 font-semibold text-gray-600">
+                <button>Home</button>
+                <button>Shop</button>
+                <button>Contact</button>
+            </div>
+            <div class="icon">
+                <button><img src="./Assets/Frame.svg" alt=""></button>
+            </div>
+        </nav>
     </header>
     <main>
 
