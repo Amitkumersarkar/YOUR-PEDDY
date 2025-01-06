@@ -1,0 +1,15 @@
+*{
+  padding: 0px;  
+  margin: 0px;
+}
+.heading-1{
+    font-size: medium;
+    font-weight: 500;
+}
+.heading-2{
+font-size: 30px;
+font-weight: 900;
+}
+.btn{
+    background-color: #0E7A81;
+}

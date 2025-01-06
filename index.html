@@ -16,12 +16,13 @@
 
 <body>
     <header>
-        <nav class="w-11/12 mx-auto py-8 px-5 flex justify-between items-center border-b">
+        <nav
+            class="w-11/12 mx-auto flex py-8 px-5 justify-between items-center border-b sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
             <div class="logo flex gap-2">
                 <img src="./Assets/logo.webp" alt="">
                 <p class="font-extrabold">Peddy</p>
             </div>
-            <div class="flex gap-7 font-semibold text-gray-600">
+            <div class="flex gap-8 font-semibold text-gray-600">
                 <button>Home</button>
                 <button>Shop</button>
                 <button>Contact</button>
@@ -30,12 +31,30 @@
                 <button><img src="./Assets/Frame.svg" alt=""></button>
             </div>
         </nav>
+
     </header>
     <main>
-        <section class="flex justify-center">
+        <section class="flex justify-center pb-3 pt-1">
             <div>
-                <h5>Bringing Families Together </h5>
-                <h1>Your Path to Adoption Starts Here</h1>
+                <h5 class="heading-1 pb-4 text-gray-500 pl-20">Bringing Families Together ❤️‍🔥</h5>
+                <h1 class="heading-2">Your Path to Adoption <br> Starts Here</h1>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex justify-center items-center">
+                <p class="font-medium text-gray-600">It is a long established fact that a reader will be distracted
+                    by
+                    the
+                    readable content of a page when
+                    looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
+                </p>
+            </div>
+            <div class="flex justify-center pt-8 pb-4">
+                <button class="btn btn-secondary bg-emerald-900">View More</button>
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="./Assets/pet.webp" alt="">
             </div>
         </section>
     </main>
