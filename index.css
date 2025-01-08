@@ -1,15 +1,28 @@
-*{
-  padding: 0px;  
+* {
+  padding: 0px;
   margin: 0px;
 }
-.heading-1{
-    font-size: medium;
-    font-weight: 500;
+.heading-1 {
+  font-size: medium;
+  font-weight: 500;
 }
-.heading-2{
-font-size: 30px;
-font-weight: 900;
+.heading-2 {
+  font-size: 40px;
+  font-weight: 900;
 }
-.btn{
-    background-color: #0E7A81;
+.btn {
+  background-color: #0e7a81;
+}
+
+.font {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+.text {
+  display: flex;
+  justify-content: center;
 }
