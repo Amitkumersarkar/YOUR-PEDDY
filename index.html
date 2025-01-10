@@ -51,14 +51,17 @@
                 </p>
             </div>
             <div class="flex justify-center pt-8 pb-4">
-                <button class="btn bg-emerald-700 text-white">View More</button>
+
+                <a href="#all-pet-section">
+                    <button class="btn bg-emerald-700 text-white">View More</button>
+                </a>
             </div>
             <div class="flex justify-center items-center">
                 <img src="./Assets/pet.webp" alt="">
             </div>
         </section>
         <!-- adopt section -->
-        <section class="pb-10">
+        <section id="all-pet-section" class="pb-10">
             <div class="font">
                 <h1>Adopt Your Best Friend</h1>
             </div>
@@ -69,148 +72,47 @@
             </div>
         </section>
         <!-- category section -->
-        <section class="flex justify-evenly gap-5 pb-12">
-            <button class="btn-category flex"><img src="./Assets/shiba 1.svg" alt="">Dogs</button>
-            <button class="btn-category flex"><img src="./Assets/cat 1.svg" alt=""> Cats</button>
-            <button class="btn-category flex"><img src="./Assets/rabbit 1.svg" alt=""> Rabbits</button>
-            <button class="btn-category flex"><img src="./Assets/parrot 1.svg" alt=""> Birds</button>
-        </section>
-
-        <!-- best deal section -->
-
+        <div id="categories-btn-container" class="mt-6 md:flex grid grid-cols-2 gap-2 items-center justify-around">
+        </div>
+        <!-- category section end  -->
         <section>
             <div class="flex justify-between items-center pb-12">
                 <h3 class="font-bold">Best Deal For you</h3>
-                <button class="btn bg-emerald-700 text-white">Short By Price</button>
+                <button class="btn bg-emerald-700 text-white" onclick="handleSort()">Short By Price</button>
             </div>
         </section>
 
-        <!-- best deal card section start-->
-        <section class="flex gap-6 pb-12">
-            <!-- card-1 -->
-            <div class="flex justify-center items-start pb-3 card bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <img src="./Assets/Rectangle 1.png" alt="" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Mister Tartosh</h2>
-
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (1).svg" alt="">
-                        </figure>
-                        <p>Breed: Golder retriever</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (2).svg" alt="">
-                        </figure>
-                        <p>Birth: 2024</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (3).svg" alt="">
-                        </figure>
-                        <p>Gender: Female</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (4).svg" alt="">
-                        </figure>
-                        <p>Price : 199$</p>
-                    </div>
+        <!-- display all pets start-->
+        <div class="grid lg:grid-cols-4 grid-cols-3 my-6 md:gap-3 gap-1" id="pet-display-section">
+            <!-- left side card -->
+            <div class="lg:col-span-3 col-span-2 border rounded-xl ">
+                <div id="loadingImage" class="hidden col-span-3">
+                    <img class="mx-auto" src="./images/docLoader.gif" alt="">
                 </div>
-
-                <div>
-                    <button class="btn"><img src="./Assets/Frame (5).svg" alt=""></button>
-                    <button class="btn text-cyan-800">Adopt</button>
-                    <button class="btn text-cyan-800">Details</button>
+                <div id="card-container" class="grid lg:grid-cols-3 md:grid-cols-2 gap-3 md:p-4">
                 </div>
             </div>
 
-            <!-- card-2 -->
-            <div class="flex justify-center items-start pb-3 card bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <img src="./Assets/Rectangle 2.png" alt="" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Charlie</h2>
-
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (1).svg" alt="">
-                        </figure>
-                        <p>Breed: Golder retriever</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (2).svg" alt="">
-                        </figure>
-                        <p>Birth: 2024</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (3).svg" alt="">
-                        </figure>
-                        <p>Gender: Male</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (4).svg" alt="">
-                        </figure>
-                        <p>Price : 259$</p>
-                    </div>
-                </div>
-
-                <div>
-                    <button class="btn"><img src="./Assets/Frame (5).svg" alt=""></button>
-                    <button class="btn text-cyan-800">Adopt</button>
-                    <button class="btn text-cyan-800">Details</button>
+            <!-- right side card-->
+            <div class="md:p-5 p-2 rounded-xl border">
+                <div id="pitLikeOutput" class="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-2">
+                    <h1 id="hiddenPetTitle" class="text-xl font-bold md:col-span-2">Do You Like Any Pets..?</h1>
                 </div>
             </div>
+        </div>
+        </div>
+        <!-- display all pets end-->
 
-            <!-- card-3 -->
-            <div class="flex justify-center items-start pb-3 card bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <img src="./Assets/Rectangle 3.png" alt="" />
-                </figure>
-                <div class="card-body flex justify-center items-start">
-                    <h2 class="card-title">Alessia Max</h2>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (1).svg" alt="">
-                        </figure>
-                        <p>Breed: Golder retriever</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (2).svg" alt="">
-                        </figure>
-                        <p>Birth: 2024</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (3).svg" alt="">
-                        </figure>
-                        <p>Gender: Female</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <figure>
-                            <img src="./Assets/Frame (4).svg" alt="">
-                        </figure>
-                        <p>Price : 299$</p>
-                    </div>
-                </div>
+        <!-- Open the modal -->
+        <div id="petDetialsContainer">
+        </div>
+        </dialog>
+        </div>
 
-                <div>
-                    <button class="btn"><img src="./Assets/Frame (5).svg" alt=""></button>
-                    <button class="btn text-cyan-800">Adopt</button>
-                    <button class="btn text-cyan-800">Details</button>
-                </div>
-            </div>
+        <div id="countDownContainer">
 
-        </section>
-        <!-- card section end -->
+        </div>
+
     </main>
 
     <!-- footer section start -->
@@ -286,7 +188,7 @@
                 </label>
                 <div class="join">
                     <input type="text" placeholder="username@gmail.com" class="input input-bordered join-item" />
-                    <button class="btn bg-teal-800 text-white join-item">Subscribe</button>
+                    <button class="btn bg-emerald-700 text-white join-item">Subscribe</button>
                 </div>
             </fieldset>
         </form>
